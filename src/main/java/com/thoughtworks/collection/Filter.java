@@ -25,7 +25,7 @@ public class Filter {
     }
 
     public List<Integer> getCommonElements(List<Integer> firstList, List<Integer> secondList) {
-        return firstList.stream().filter(element -> secondList.contains(element)).collect(Collectors.toList());
+        return firstList.stream().filter(secondList::contains).collect(Collectors.toList());
     }
 
     public List<Integer> getDifferentElements() {
